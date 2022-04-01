@@ -21,7 +21,13 @@ Route::get('/', function () {
 //     return view('generic');
 // })->name('1');
 Route::get('/generic','App\Http\Controllers\RelacionController@index')->name('generic');
+// Route::get('/generic','App\Http\Controllers\RelacionController@obtenerTitulo')->name('generic');
 
-Route::get('/2', function () {
-    return view('g2');
-})->name('2');
+Route::get('/2','App\Http\Controllers\RelacionController@g2')->name('2');
+
+// Route::get('/')->name('');
+
+
+// Route::get('/2', function () {
+//     return view('g2');
+// })->name('2');

@@ -1,9 +1,5 @@
 @extends('Layout.p1')
 
-
-
 @section('Titulo')
-@foreach($eventos as $evento)
-<h1 class="major">{{$evento->id}}</h1>
-@endforeach
+<h1 class="major">{{$evento->id}}.-{{$evento->Pais}}</h1>
 @endsection
