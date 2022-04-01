@@ -28,17 +28,24 @@
 
 		<!-- Wrapper -->
 			<div id="wrapper">
+                <h1 class="major" id="id"></h1>
+                <h1 class="major" id="actividad"></h1>
+                <h1 class="major" id="Tipo"></h1>
+                <h1 class="major" id="participantes"></h1>
+                
 
-				<!-- Main -->
-					<section id="main" class="wrapper">
-						<div class="inner">
-							@yield('Titulo')
-							@yield('Imagen')
-							@yield('Contenido')
-						</div>
-					</section>
 
 			</div>
+            <script>
+                fetch('http://www.boredapi.com/api/activity/')
+                .then(res => res.json())
+                .then(data => {
+                    document.getElementById('id').innerHTML = data.key;
+                    document.getElementById('actividad').innerHTML = data.activity;
+                    document.getElementById('Tipo').innerHTML = data.type;
+                    document.getElementById('participantes').innerHTML = data.participants;
+                });
+            </script>
 
 		<!-- Footer -->
 			<footer id="footer" class="wrapper alt">

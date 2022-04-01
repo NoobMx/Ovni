@@ -17,9 +17,9 @@ Route::get('/', function () {
     return view('index');
 });
 
-// Route::get('/1', function () {
-//     return view('generic');
-// })->name('1');
+Route::get('/3', function () {
+    return view('api');
+})->name('3');
 Route::get('/generic','App\Http\Controllers\RelacionController@index')->name('generic');
 // Route::get('/generic','App\Http\Controllers\RelacionController@obtenerTitulo')->name('generic');
 
